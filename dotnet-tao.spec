@@ -8,8 +8,8 @@ Group:		Libraries
 Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	170e143b8035644eb3c24db4cc7a2c3b
 URL:		http://www.mono-project.com/Tao
-Requires:	mono >= 1.1.0
 BuildRequires:	mono >= 1.1.0
+Requires:	mono >= 1.1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,7 +39,7 @@ ró¿nych rozszerzeñ GL i WGL, OpenAL 1.0, Cg 1.2.1, DevIL 1.6.6, SDL
 
 Wszystkie te wi±zania zdatne s± do u¿ytku na wielu platformach
 sprzêtowych i w wielu ¶rodowiskach uruchomieniowych. Obs³ugiwane jest
-Microsoftowe .NET 1.0 i 1.1 pod Windowsami oraz Mono pod Windowsami i
+microsoftowe .NET 1.0 i 1.1 pod Windowsami oraz Mono pod Windowsami i
 Linuksem. Inne platformy i ¶rodowiska nie zosta³y przetestowane, lecz
 prawdopodobnie równie¿ bêd± dzia³aæ z minimaln± ilo¶ci± zmian.
 
@@ -64,7 +64,8 @@ Przyk³adowe programy Tao.
 
 %build
 %{__make} mono-1.1
-%{__make} STRONG=1 -C src
+%{__make} -C src \
+	STRONG=1
 
 %install
 rm -rf $RPM_BUILD_ROOT
