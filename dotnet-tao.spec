@@ -10,7 +10,7 @@ Source0:	%{name}-%{version}.tar.bz2
 # Source0-md5:	170e143b8035644eb3c24db4cc7a2c3b
 URL:		http://www.mono-project.com/Tao
 BuildRequires:	mono >= 1.1.0
-BuildRequires:	rpm-build >= 4.4.2-0.3
+BuildRequires:	rpmbuild(monoautodeps)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
