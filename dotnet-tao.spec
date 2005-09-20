@@ -1,12 +1,12 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	Tao Framework
 Summary(pl):	Framework Tao
-Name:		tao
+Name:		dotnet-tao
 Version:	20050606
 Release:	1
 License:	MIT
 Group:		Libraries
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	tao-%{version}.tar.bz2
 # Source0-md5:	170e143b8035644eb3c24db4cc7a2c3b
 URL:		http://www.mono-project.com/Tao
 BuildRequires:	mono >= 1.1.0
@@ -40,7 +40,7 @@ ró¿nych rozszerzeñ GL i WGL, OpenAL 1.0, Cg 1.2.1, DevIL 1.6.6, SDL
 
 Wszystkie te wi±zania zdatne s± do u¿ytku na wielu platformach
 sprzêtowych i w wielu ¶rodowiskach uruchomieniowych. Obs³ugiwane jest
-microsoftowe .NET 1.0 i 1.1 pod Windowsami oraz Mono pod Windowsami i
+microsoftowe .NET 1.0 i 1.1 pod Windows oraz Mono pod Windows i
 Linuksem. Inne platformy i ¶rodowiska nie zosta³y przetestowane, lecz
 prawdopodobnie równie¿ bêd± dzia³aæ z minimaln± ilo¶ci± zmian.
 
@@ -61,7 +61,7 @@ Tao example programs.
 Przyk³adowe programy Tao.
 
 %prep
-%setup -q
+%setup -q -n tao-%{version}
 
 %build
 %{__make} mono-1.1
@@ -70,14 +70,14 @@ Przyk³adowe programy Tao.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_examplesdir}/tao}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_examplesdir}/%{name}-%{version}}
 
 for i in dist/bin/*.dll
 do
 	gacutil -root $RPM_BUILD_ROOT%{_libdir} -package tao -i $i
 done
 
-cp -Rf examples/* $RPM_BUILD_ROOT%{_examplesdir}/tao
+cp -Rf examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -91,4 +91,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files examples
 %defattr(644,root,root,755)
-%{_examplesdir}/tao
+%{_examplesdir}/%{name}-%{version}
