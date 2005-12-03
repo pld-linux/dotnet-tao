@@ -9,8 +9,9 @@ Group:		Libraries
 Source0:	tao-%{version}.tar.bz2
 # Source0-md5:	170e143b8035644eb3c24db4cc7a2c3b
 URL:		http://www.mono-project.com/Tao
-BuildRequires:	mono >= 1.1.0
+BuildRequires:	mono >= 1.1.7
 BuildRequires:	rpmbuild(monoautodeps)
+Requires:	mono >= 1.1.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,7 +52,7 @@ ró¿norakie jêzyki .NET, po¶ród nich na przyk³ad C# i Visual Basic
 %package examples
 Summary:	Tao example programs
 Summary(pl):	Przyk³adowe programy Tao
-Group:		Libraries
+Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
@@ -74,7 +75,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_examplesdir}/%{name}-%{version}}
 
 for i in dist/bin/*.dll
 do
-	gacutil -root $RPM_BUILD_ROOT%{_libdir} -package tao -i $i
+	gacutil -root $RPM_BUILD_ROOT%{_prefix}/lib -package tao -i $i
 done
 
 cp -Rf examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
@@ -85,9 +86,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.txt src/Tao.*/Tao.*.Readme.txt
-%attr(755,root,root) %{_libdir}/mono/gac/*/*/*.dll
-%{_libdir}/mono/gac/*/*/*.config
-%{_libdir}/mono/tao
+%attr(755,root,root) %{_prefix}/lib/mono/gac/*/*/*.dll
+%{_prefix}/lib/mono/gac/*/*/*.config
+%{_prefix}/lib/mono/tao
 
 %files examples
 %defattr(644,root,root,755)
