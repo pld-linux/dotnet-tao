@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	Tao Framework
-Summary(pl):	Framework Tao
+Summary(pl.UTF-8):   Framework Tao
 Name:		dotnet-tao
 Version:	20050606
 Release:	1
@@ -31,35 +31,35 @@ changes.
 The bindings are also CLS-compliant, meaning that they can be used by
 any .NET language, including C# and Visual Basic .NET, amongst others.
 
-%description -l pl
-Framework Tao dla .NET jest kolekcj± wi±zañ umo¿liwiaj±c±
-miêdzyplatformowe tworzenie gier opartych na platformie .NET.
+%description -l pl.UTF-8
+Framework Tao dla .NET jest kolekcjÄ… wiÄ…zaÅ„ umoÅ¼liwiajÄ…cÄ…
+miÄ™dzyplatformowe tworzenie gier opartych na platformie .NET.
 
-Aktualnie zawarte s± wi±zania do OpenGL 2.0, GLU 1.3, GLUT 3.7.6, WGL,
-ró¿nych rozszerzeñ GL i WGL, OpenAL 1.0, Cg 1.2.1, DevIL 1.6.6, SDL
+Aktualnie zawarte sÄ… wiÄ…zania do OpenGL 2.0, GLU 1.3, GLUT 3.7.6, WGL,
+rÃ³Å¼nych rozszerzeÅ„ GL i WGL, OpenAL 1.0, Cg 1.2.1, DevIL 1.6.6, SDL
 1.2.7 i GLFW 2.4.2 (i kilku innych).
 
-Wszystkie te wi±zania zdatne s± do u¿ytku na wielu platformach
-sprzêtowych i w wielu ¶rodowiskach uruchomieniowych. Obs³ugiwane jest
+Wszystkie te wiÄ…zania zdatne sÄ… do uÅ¼ytku na wielu platformach
+sprzÄ™towych i w wielu Å›rodowiskach uruchomieniowych. ObsÅ‚ugiwane jest
 microsoftowe .NET 1.0 i 1.1 pod Windows oraz Mono pod Windows i
-Linuksem. Inne platformy i ¶rodowiska nie zosta³y przetestowane, lecz
-prawdopodobnie równie¿ bêd± dzia³aæ z minimaln± ilo¶ci± zmian.
+Linuksem. Inne platformy i Å›rodowiska nie zostaÅ‚y przetestowane, lecz
+prawdopodobnie rÃ³wnieÅ¼ bÄ™dÄ… dziaÅ‚aÄ‡ z minimalnÄ… iloÅ›ciÄ… zmian.
 
-Wi±zania s± równie¿ zgodne z CLS, co znaczy, ¿e mog± byæ u¿ywane przez
-ró¿norakie jêzyki .NET, po¶ród nich na przyk³ad C# i Visual Basic
+WiÄ…zania sÄ… rÃ³wnieÅ¼ zgodne z CLS, co znaczy, Å¼e mogÄ… byÄ‡ uÅ¼ywane przez
+rÃ³Å¼norakie jÄ™zyki .NET, poÅ›rÃ³d nich na przykÅ‚ad C# i Visual Basic
 .NET.
 
 %package examples
 Summary:	Tao example programs
-Summary(pl):	Przyk³adowe programy Tao
+Summary(pl.UTF-8):   PrzykÅ‚adowe programy Tao
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 Tao example programs.
 
-%description examples -l pl
-Przyk³adowe programy Tao.
+%description examples -l pl.UTF-8
+PrzykÅ‚adowe programy Tao.
 
 %prep
 %setup -q -n tao-%{version}
