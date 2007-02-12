@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.mono
 Summary:	Tao Framework
-Summary(pl.UTF-8):   Framework Tao
+Summary(pl.UTF-8):	Framework Tao
 Name:		dotnet-tao
 Version:	20050606
 Release:	1
@@ -51,7 +51,7 @@ różnorakie języki .NET, pośród nich na przykład C# i Visual Basic
 
 %package examples
 Summary:	Tao example programs
-Summary(pl.UTF-8):   Przykładowe programy Tao
+Summary(pl.UTF-8):	Przykładowe programy Tao
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
