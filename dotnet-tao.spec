@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.mono
 Summary:	Tao Framework
 Summary(pl.UTF-8):	Framework Tao
 Name:		dotnet-tao
